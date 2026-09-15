@@ -68,8 +68,6 @@ quick-terminal-animation-duration = 0.1
 quick-terminal-autohide = true
 
 # ── keybinds ─────────────────────────────────────────────
-# global: summon dropdown terminal from anywhere in macOS
-keybind = global:cmd+grave_accent=toggle_quick_terminal
 
 # splits (vim-ish)
 keybind = cmd+d=new_split:right
