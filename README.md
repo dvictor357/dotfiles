@@ -11,13 +11,14 @@ Terminal-first setup for macOS. Palette: **void** — near-black, grey, one gree
 | nvim    | `nvim/` — LazyVim, tokyonight recolored to void |
 | bat     | `bat/config` |
 | git     | `git/.gitconfig` — delta pager |
+| brew    | `Brewfile` — curated: terminal core, cli tools, fonts, apps |
 
 ## Install
 
 ```sh
 git clone https://github.com/dvictor357/dotfiles ~/dotfiles
 ~/dotfiles/install.sh          # symlink only
-~/dotfiles/install.sh --brew   # also install packages + font
+~/dotfiles/install.sh --brew   # also brew bundle the Brewfile (cli, fonts, apps)
 exec zsh
 ```
 

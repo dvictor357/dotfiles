@@ -32,10 +32,8 @@ link herdr/config.toml "$HOME/.config/herdr/config.toml"
 link herdr/cheatsheet.txt "$HOME/.config/herdr/cheatsheet.txt"
 
 if [[ "${1:-}" == "--brew" ]]; then
-    echo "installing brew packages..."
-    brew install eza bat fd ripgrep fzf zoxide git-delta lazygit btop tmux neovim herdr \
-        zsh-autosuggestions zsh-fast-syntax-highlighting
-    brew install --cask font-fira-code-nerd-font
+    echo "installing brew packages from Brewfile..."
+    brew bundle install --file="$DOT/Brewfile"
 fi
 
 echo "done. restart shell: exec zsh"
