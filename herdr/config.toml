@@ -72,6 +72,12 @@ rename_workspace  = "prefix+shift+w"
 close_workspace   = "prefix+shift+x"
 switch_workspace  = "prefix+shift+1..9"
 toggle_sidebar    = "prefix+b"
+open_notification_target = "prefix+shift+o"
+
+# agents (sidebar bottom list)
+next_agent        = "prefix+a"
+previous_agent    = "prefix+shift+a"
+focus_agent       = "prefix+ctrl+1..9"
 
 # tabs (≈ tmux windows)
 new_tab           = "prefix+c"

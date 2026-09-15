@@ -30,6 +30,14 @@ WORKSPACES  (≈ tmux sessions)
   prefix + Shift+1..9     Jump to workspace by number
   prefix + b              Toggle sidebar
 
+AGENTS  (sidebar bottom list — claude, codex, etc.)
+────────────────────────────────────────────────────────────
+  prefix + a              Next agent
+  prefix + A              Previous agent
+  prefix + Ctrl+1..9      Jump to agent by number
+  prefix + O              Open pane that needs attention (notification)
+  prefix + g              Goto: fuzzy jump to any workspace / tab / agent
+
 TABS  (≈ tmux windows)
 ────────────────────────────────────────────────────────────
   prefix + c              New tab (current path)
@@ -73,7 +81,6 @@ MISC
   prefix + ?              Built-in help (all bindings)
   prefix + ,              Settings
   prefix + R              Reload config
-  prefix + o              (in prefix) open notification target
   herdr server reload-config   Reload from the shell
   herdr config check           Validate config.toml
 
