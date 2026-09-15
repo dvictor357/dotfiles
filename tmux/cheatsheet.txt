@@ -1,0 +1,91 @@
+════════════════════════════════════════════════════════════
+  TMUX CHEAT SHEET  (void)
+  PREFIX = Ctrl+Space   (press together, release, then the key)
+  Config: ~/.config/tmux/tmux.conf   ·   Reload: prefix r
+════════════════════════════════════════════════════════════
+
+SESSIONS  (persist even after you close kitty / disconnect SSH)
+────────────────────────────────────────────────────────────
+  tmux                    Start a new session
+  tmux new -s work        Start a named session "work"
+  tmux ls                 List all sessions
+  tmux a                  Attach to last session
+  tmux a -t work          Attach to session "work"
+  prefix + d              Detach (session keeps running in bg)
+  prefix + $              Rename current session
+  prefix + N              New named session (prompts for name)
+  prefix + S              Switch session (interactive picker)
+  prefix + X              Kill current session (asks y/n)
+
+WINDOWS  (like browser tabs)
+────────────────────────────────────────────────────────────
+  prefix + c              New window (opens in current path)
+  prefix + ,              Rename current window
+  prefix + &              Kill current window
+  prefix + n / p          Next / previous window
+  prefix + 0..9           Jump to window by number
+  Alt + 1..5              Jump to window 1-5  (NO prefix needed)
+  prefix + w              Window picker (list & choose)
+
+PANES  (splits inside a window)
+────────────────────────────────────────────────────────────
+  prefix + |              Split left/right (vertical border)
+  prefix + -              Split top/bottom (horizontal border)
+  prefix + x              Kill current pane (asks y/n)
+  prefix + z              Zoom pane fullscreen (toggle)
+  prefix + o              Cycle to next pane
+  prefix + Space          Cycle through layouts
+
+  NAVIGATE  (vim keys)
+  prefix + h / j / k / l  Move to left / down / up / right pane
+
+  RESIZE  (hold key to repeat — it's a -r bind)
+  prefix + H / J / K / L  Resize toward left / down / up / right
+
+COPY MODE  (scroll back & select text)
+────────────────────────────────────────────────────────────
+  prefix + [              Enter copy/scroll mode
+    k / j  or  arrows     Scroll up / down
+    Ctrl+u / Ctrl+d       Half page up / down
+    /  then text          Search down   (n = next, N = prev)
+    ?  then text          Search up
+    v                     Start selection   (vim-style)
+    y                     Copy selection & exit
+    q                     Quit copy mode (no copy)
+  prefix + ]              Paste copied text
+  (Mouse: just scroll the wheel to enter copy mode)
+
+MISC
+────────────────────────────────────────────────────────────
+  prefix + r              Reload this config
+  prefix + ?              Popup cheat sheet (q to quit)
+  prefix + /              Popup ALL keybindings (q to quit)
+  prefix + :              tmux command prompt
+  prefix + t              Big clock (q to exit)
+
+KITTY + TMUX + SSH NOTES
+────────────────────────────────────────────────────────────
+  - Mouse is on: click panes, drag borders, wheel-scroll.
+  - Run tmux ON the remote host (over SSH) for true detach/
+    reattach — local kitty just renders it.
+  - Use `kitten ssh <host>` (aliased to `ssh`) so colors,
+    keys, and shell integration work on remote boxes.
+  - Inline images (kitty graphics / icat) do NOT pass through
+    tmux — that's a tmux limitation, not a bug.
+
+CHEAT THE CHEAT SHEET
+────────────────────────────────────────────────────────────
+  Show popup in tmux:        prefix + ?
+  Show this file any time:   cat ~/.config/tmux/cheatsheet.txt
+  Suggested alias:           alias tcheat='cat ~/.config/tmux/cheatsheet.txt'
+  Shift+Enter newline:       sends CSI-u  ESC [ 13 ; 2 u
+════════════════════════════════════════════════════════════
+
+POPUPS  (added: void)
+────────────────────────────────────────────────────────────
+  prefix + g              lazygit  (current path)
+  prefix + b              btop
+  prefix + t              scratch shell (current path)
+  prefix + s              fzf session switcher
+  prefix + Tab            last window
+  prefix + z              zoom pane

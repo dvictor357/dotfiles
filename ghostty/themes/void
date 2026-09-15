@@ -1,0 +1,30 @@
+# void — near-black monochrome, single phosphor-green accent
+
+background = #0a0a0a
+foreground = #c9c9c9
+
+cursor-color = #5fb56a
+cursor-text  = #0a0a0a
+
+selection-background = #262626
+selection-foreground = #ededed
+
+# normal
+palette = 0=#0a0a0a
+palette = 1=#cf5c5c
+palette = 2=#5fb56a
+palette = 3=#c9a85c
+palette = 4=#6b8fb5
+palette = 5=#a98cc4
+palette = 6=#5fb5a8
+palette = 7=#c9c9c9
+
+# bright
+palette = 8=#4a4a4a
+palette = 9=#e06c6c
+palette = 10=#7ccb84
+palette = 11=#dbbf75
+palette = 12=#82a5cc
+palette = 13=#bca4d6
+palette = 14=#7ccbbf
+palette = 15=#ededed

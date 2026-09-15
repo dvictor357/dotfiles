@@ -1,0 +1,87 @@
+# ── theme ────────────────────────────────────────────────
+theme = void
+bold-is-bright = false
+minimum-contrast = 1.1
+
+# ── font ─────────────────────────────────────────────────
+font-family = FiraCode Nerd Font Mono
+font-family-bold = FiraCode Nerd Font Mono SemiBold
+font-size = 13.5
+font-thicken = true
+font-thicken-strength = 40
+# ligatures: keep ==> != -> but kill the fancy ones
+font-feature = +calt
+font-feature = -ss01
+font-feature = -ss02
+adjust-cell-height = 12%
+adjust-underline-position = 2
+
+# ── window ───────────────────────────────────────────────
+window-padding-x = 14
+window-padding-y = 10
+window-padding-balance = true
+window-decoration = auto
+macos-titlebar-style = hidden
+macos-window-shadow = false
+window-theme = dark
+window-colorspace = display-p3
+background-opacity = 0.96
+background-blur = 24
+resize-overlay = never
+window-save-state = always
+window-inherit-working-directory = true
+macos-icon = xray
+
+# ── cursor ───────────────────────────────────────────────
+cursor-style = block
+cursor-style-blink = false
+mouse-hide-while-typing = true
+
+# ── behavior ─────────────────────────────────────────────
+shell-integration = zsh
+shell-integration-features = cursor,no-sudo,title,path
+scrollback-limit = 20000000
+copy-on-select = clipboard
+clipboard-paste-protection = true
+confirm-close-surface = false
+quit-after-last-window-closed = false
+link-url = true
+macos-option-as-alt = true
+auto-update = check
+
+# ── splits ───────────────────────────────────────────────
+unfocused-split-opacity = 0.55
+split-divider-color = #262626
+
+# ── quick terminal (dropdown) ────────────────────────────
+quick-terminal-position = top
+quick-terminal-animation-duration = 0.1
+quick-terminal-autohide = true
+
+# ── keybinds ─────────────────────────────────────────────
+# global: summon dropdown terminal from anywhere in macOS
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+
+# splits (vim-ish)
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+keybind = cmd+h=goto_split:left
+keybind = cmd+j=goto_split:down
+keybind = cmd+k=goto_split:up
+keybind = cmd+l=goto_split:right
+keybind = cmd+shift+z=toggle_split_zoom
+keybind = cmd+shift+e=equalize_splits
+
+# tabs
+keybind = cmd+t=new_tab
+keybind = cmd+shift+bracket_left=previous_tab
+keybind = cmd+shift+bracket_right=next_tab
+
+# misc
+keybind = cmd+shift+r=reload_config
+keybind = cmd+shift+comma=open_config
+keybind = cmd+shift+f=toggle_fullscreen
+keybind = cmd+plus=increase_font_size:1
+keybind = cmd+minus=decrease_font_size:1
+keybind = cmd+zero=reset_font_size
+keybind = shift+enter=text:\n

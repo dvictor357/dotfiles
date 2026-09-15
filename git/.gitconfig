@@ -1,0 +1,55 @@
+[user]
+	name = Dimas Victor
+	email = dvictor.1357@outlook.com
+	signingKey = 
+[init]
+    defaultBranch = main
+# machine-local overrides: work identity, private hosts (not in repo)
+[include]
+    path = ~/.gitconfig-local
+[credential "https://github.com"]
+    username = dvictor357
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[gpg]
+	format = 
+	program = gpg
+[commit]
+	gpgSign = false
+[tag]
+	forceSignAnnotated = false
+[gpg "ssh"]
+	program = 
+	allowedSignersFile = 
+[core]
+	excludesfile = ~/.gitignore_global
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	line-numbers = true
+	side-by-side = false
+	syntax-theme = ansi
+	minus-style = "syntax #2a1515"
+	plus-style = "syntax #132a17"
+	line-numbers-minus-style = "#cf5c5c"
+	line-numbers-plus-style = "#5fb56a"
+	line-numbers-zero-style = "#4a4a4a"
+	file-style = "#c9c9c9 bold"
+	file-decoration-style = "#262626 ul"
+	hunk-header-style = "#4a4a4a"
+	hunk-header-decoration-style = "#262626 box"
+[merge]
+	conflictstyle = zdiff3
+[diff]
+	colorMoved = default

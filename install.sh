@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# Symlink dotfiles into place. Existing targets are backed up to ~/.dotfiles-backup-<timestamp>.
+set -euo pipefail
+
+DOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BAK="$HOME/.dotfiles-backup-$(date +%Y%m%d-%H%M%S)"
+
+link() {
+    local src="$DOT/$1" dst="$2"
+    if [[ -L "$dst" && "$(readlink "$dst")" == "$src" ]]; then
+        echo "  ok   $dst"
+        return
+    fi
+    if [[ -e "$dst" || -L "$dst" ]]; then
+        mkdir -p "$BAK"
+        mv "$dst" "$BAK/$(basename "$dst")"
+        echo "  bak  $dst -> $BAK/"
+    fi
+    mkdir -p "$(dirname "$dst")"
+    ln -s "$src" "$dst"
+    echo "  link $dst -> $src"
+}
+
+echo "linking..."
+link ghostty        "$HOME/.config/ghostty"
+link tmux           "$HOME/.config/tmux"
+link bat            "$HOME/.config/bat"
+link nvim           "$HOME/.config/nvim"
+link zsh/.zshrc     "$HOME/.zshrc"
+link git/.gitconfig "$HOME/.gitconfig"
+
+if [[ "${1:-}" == "--brew" ]]; then
+    echo "installing brew packages..."
+    brew install eza bat fd ripgrep fzf zoxide git-delta lazygit btop tmux neovim \
+        zsh-autosuggestions zsh-fast-syntax-highlighting
+    brew install --cask font-fira-code-nerd-font
+fi
+
+echo "done. restart shell: exec zsh"

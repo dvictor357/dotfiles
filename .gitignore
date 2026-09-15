@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+# never commit secrets
+.zsh_secrets
+*secret*
+*.pem
+*.key
