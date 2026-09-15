@@ -29,6 +29,7 @@ link nvim              "$HOME/.config/nvim"
 link zsh/.zshrc        "$HOME/.zshrc"
 link git/.gitconfig    "$HOME/.gitconfig"
 link herdr/config.toml "$HOME/.config/herdr/config.toml"
+link herdr/cheatsheet.txt "$HOME/.config/herdr/cheatsheet.txt"
 
 if [[ "${1:-}" == "--brew" ]]; then
     echo "installing brew packages..."

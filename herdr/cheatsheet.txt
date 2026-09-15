@@ -1,0 +1,94 @@
+════════════════════════════════════════════════════════════
+  HERDR CHEAT SHEET  (void)
+  PREFIX = Ctrl+Space   (press together, release, then the key)
+  Config: ~/.config/herdr/config.toml   ·   Reload: prefix R
+════════════════════════════════════════════════════════════
+
+CONCEPTS
+────────────────────────────────────────────────────────────
+  workspace  = one project / repo  (≈ tmux session, left sidebar)
+  tab        = inside a workspace  (≈ tmux window, bottom bar)
+  pane       = split inside a tab  (≈ tmux pane)
+  Server keeps running when you detach — panes survive.
+
+SESSION
+────────────────────────────────────────────────────────────
+  herdr                   Launch or attach to the persistent session
+  herdr --session work    Named session "work"
+  herdr session attach x  Attach to named session
+  herdr status            Show client / server status
+  herdr server stop       Stop the background server (kills panes!)
+  prefix + d              Detach (server keeps running)
+
+WORKSPACES  (≈ tmux sessions)
+────────────────────────────────────────────────────────────
+  prefix + N              New workspace (Shift+n)
+  prefix + w              Workspace picker
+  prefix + g              Goto (fuzzy jump to workspace / tab / pane)
+  prefix + W              Rename workspace
+  prefix + X              Close workspace (asks y/n)
+  prefix + Shift+1..9     Jump to workspace by number
+  prefix + b              Toggle sidebar
+
+TABS  (≈ tmux windows)
+────────────────────────────────────────────────────────────
+  prefix + c              New tab (current path)
+  prefix + n / p          Next / previous tab
+  prefix + 1..9           Jump to tab by number
+  prefix + T              Rename tab
+  prefix + Q              Close tab
+
+PANES  (nvim <C-w> muscle memory)
+────────────────────────────────────────────────────────────
+  prefix + v              Split left/right   (:vsplit)
+  prefix + s              Split top/bottom   (:split)
+  prefix + x              Close pane
+  prefix + z              Zoom pane fullscreen (toggle)
+  prefix + o              Cycle to next pane
+  prefix + Tab            Last pane (back and forth)
+  prefix + P              Rename pane
+
+  NAVIGATE
+  prefix + h / j / k / l  Move to left / down / up / right pane
+  prefix + H / J / K / L  Swap pane toward left / down / up / right
+
+  RESIZE
+  prefix + r              Resize mode: h/j/k/l repeat, Esc to exit
+  prefix + ← ↓ ↑ →        One-shot resize (no mode)
+
+SCROLLBACK
+────────────────────────────────────────────────────────────
+  prefix + e              Open scrollback in $EDITOR (nvim)
+  Mouse wheel             Scroll pane history
+  Drag / double-click     Select text (auto-copies)
+
+POPUPS
+────────────────────────────────────────────────────────────
+  prefix + G              lazygit   (Shift+g, 92% popup)
+  prefix + B              btop      (Shift+b, 92% popup)
+  prefix + /              This cheat sheet (q to quit)
+
+MISC
+────────────────────────────────────────────────────────────
+  prefix + ?              Built-in help (all bindings)
+  prefix + ,              Settings
+  prefix + R              Reload config
+  prefix + o              (in prefix) open notification target
+  herdr server reload-config   Reload from the shell
+  herdr config check           Validate config.toml
+
+GHOSTTY + HERDR NOTES
+────────────────────────────────────────────────────────────
+  - Run herdr directly in ghostty, NOT inside tmux — both use
+    Ctrl+Space as prefix and tmux will eat it first.
+  - Alt chords (Option+key) are unreliable through ghostty,
+    that's why popups use Shift+letter.
+  - Mouse is on: click tabs, panes, drag borders, wheel-scroll.
+  - Theme follows ghostty's void palette (theme.name = "terminal").
+
+CHEAT THE CHEAT SHEET
+────────────────────────────────────────────────────────────
+  Show popup in herdr:       prefix + /
+  Show this file any time:   cat ~/.config/herdr/cheatsheet.txt
+  Alias:                     hcheat
+════════════════════════════════════════════════════════════

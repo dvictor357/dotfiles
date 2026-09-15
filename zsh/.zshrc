@@ -167,6 +167,7 @@ alias psql="/Users/Shared/DBngin/postgresql/18.1/bin/psql"
 alias ccw="CLAUDE_CONFIG_DIR=~/.claude-work claude"
 alias ccp="CLAUDE_CONFIG_DIR=~/.claude claude"
 alias tcheat="cat ~/.config/tmux/cheatsheet.txt"
+alias hcheat="cat ~/.config/herdr/cheatsheet.txt"
 alias herdforge="/Applications/Herd/bin/forge"
 
 # ============================================================================

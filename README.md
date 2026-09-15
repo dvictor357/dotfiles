@@ -7,7 +7,7 @@ Terminal-first setup for macOS. Palette: **void** — near-black, grey, one gree
 | ghostty | `ghostty/config`, theme `ghostty/themes/void` |
 | zsh     | `zsh/.zshrc` — custom one-line prompt, fzf, eza, bat, zoxide |
 | tmux    | `tmux/tmux.conf` — prefix `ctrl+space`, top status bar |
-| herdr   | `herdr/config.toml` — void theme, bottom status bar, prefix `ctrl+space`, nvim-style pane keys |
+| herdr   | `herdr/config.toml` + `herdr/cheatsheet.txt` — void theme, bottom status bar, prefix `ctrl+space`, nvim-style pane keys |
 | nvim    | `nvim/` — LazyVim, tokyonight recolored to void |
 | bat     | `bat/config` |
 | git     | `git/.gitconfig` — delta pager |
