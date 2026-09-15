@@ -29,20 +29,16 @@ gui:
     "^main$|^master$": "#5fb56a"
     "^(feat|feature)/": "#6b8fb5"
     "^(fix|hotfix)/": "#cf5c5c"
-
 git:
-  paging:
-    colorArg: always
-    pager: delta --paging=never   # delta styling comes from ~/.gitconfig
+  diffRenderers:
+    - colorArg: always
+      command: delta --paging=never # delta styling comes from ~/.gitconfig
   parseEmoji: true
   log:
     showGraph: always
     showWholeGraph: false
-
 os:
   editPreset: nvim
-
 update:
   method: never
-
 disableStartupPopups: true

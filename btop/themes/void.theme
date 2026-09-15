@@ -1,0 +1,58 @@
+# void — near-black monochrome, single phosphor-green accent
+# gradients stay grey and only warm up (amber → red) when something is actually hot
+
+# base
+theme[main_bg]="#0a0a0a"
+theme[main_fg]="#c9c9c9"
+theme[title]="#ededed"
+theme[hi_fg]="#5fb56a"
+theme[selected_bg]="#262626"
+theme[selected_fg]="#ededed"
+theme[inactive_fg]="#4a4a4a"
+theme[graph_text]="#8a8a8a"
+theme[meter_bg]="#262626"
+theme[proc_misc]="#5fb56a"
+
+# box outlines — all grey, green only marks the focused box via hi_fg
+theme[cpu_box]="#262626"
+theme[mem_box]="#262626"
+theme[net_box]="#262626"
+theme[proc_box]="#262626"
+theme[div_line]="#262626"
+
+# temperature: grey → amber → red
+theme[temp_start]="#4a4a4a"
+theme[temp_mid]="#c9a85c"
+theme[temp_end]="#cf5c5c"
+
+# cpu: grey → green → amber
+theme[cpu_start]="#4a4a4a"
+theme[cpu_mid]="#5fb56a"
+theme[cpu_end]="#c9a85c"
+
+# memory
+theme[free_start]="#262626"
+theme[free_mid]="#4a4a4a"
+theme[free_end]="#8a8a8a"
+theme[cached_start]="#262626"
+theme[cached_mid]="#4a4a4a"
+theme[cached_end]="#6b8fb5"
+theme[available_start]="#262626"
+theme[available_mid]="#4a4a4a"
+theme[available_end]="#5fb56a"
+theme[used_start]="#4a4a4a"
+theme[used_mid]="#c9a85c"
+theme[used_end]="#cf5c5c"
+
+# network
+theme[download_start]="#262626"
+theme[download_mid]="#5fb56a"
+theme[download_end]="#7ccb84"
+theme[upload_start]="#262626"
+theme[upload_mid]="#6b8fb5"
+theme[upload_end]="#82a5cc"
+
+# process list: grey → green → amber
+theme[process_start]="#4a4a4a"
+theme[process_mid]="#5fb56a"
+theme[process_end]="#c9a85c"

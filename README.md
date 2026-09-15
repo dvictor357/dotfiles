@@ -10,6 +10,7 @@ Terminal-first setup for macOS. Palette: **void** — near-black, grey, one gree
 | herdr   | `herdr/config.toml` + `herdr/cheatsheet.txt` — void theme, bottom status bar, prefix `ctrl+space`, nvim-style pane keys |
 | nvim    | `nvim/` — LazyVim, tokyonight recolored to void |
 | lazygit | `lazygit/config.yml` — void theme, delta pager, nerd icons |
+| btop    | `btop/themes/void.theme`, `btop/btop.conf` (seeded once, btop owns it after) |
 | bat     | `bat/config` |
 | git     | `git/.gitconfig` — delta pager |
 | brew    | `Brewfile` — curated: terminal core, cli tools, fonts, apps |
