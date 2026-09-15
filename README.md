@@ -15,7 +15,7 @@ Terminal-first setup for macOS. Palette: **void** — near-black, grey, one gree
 ## Install
 
 ```sh
-git clone <repo> ~/dotfiles
+git clone https://github.com/dvictor357/dotfiles ~/dotfiles
 ~/dotfiles/install.sh          # symlink only
 ~/dotfiles/install.sh --brew   # also install packages + font
 exec zsh
@@ -23,8 +23,12 @@ exec zsh
 
 Existing files are moved to `~/.dotfiles-backup-<timestamp>`.
 
-## Not in repo
+## Local overrides
 
-- `~/.zsh_secrets` — API keys, sourced by `.zshrc` if present
-- `~/.ssh/ssh-menu.zsh` — ssh picker, sourced if present
-- `~/.gitconfig-local` — work identity, private git hosts; pulled in via `include`
+Machine-specific config lives outside the repo. Each file is optional and
+picked up automatically if it exists:
+
+| file | purpose |
+|------|---------|
+| `~/.zshrc.local` | extra env vars, aliases, anything private |
+| `~/.gitconfig-local` | per-machine git identity and `includeIf` rules |

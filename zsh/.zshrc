@@ -182,6 +182,7 @@ export NVM_DIR="$HOME/Library/Application Support/Herd/config/nvm"
 [ -s "$HOME/.bun/_bun" ]   && source "$HOME/.bun/_bun"
 [ -f ~/.zsh_secrets ]      && source ~/.zsh_secrets
 [ -f ~/.ssh/ssh-menu.zsh ] && source ~/.ssh/ssh-menu.zsh
+[ -f ~/.zshrc.local ]      && source ~/.zshrc.local   # machine-local overrides, not in repo
 
 if output="$(mole completion zsh 2>/dev/null)"; then eval "$output"; fi
 
