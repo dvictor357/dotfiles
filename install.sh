@@ -22,16 +22,17 @@ link() {
 }
 
 echo "linking..."
-link ghostty        "$HOME/.config/ghostty"
-link tmux           "$HOME/.config/tmux"
-link bat            "$HOME/.config/bat"
-link nvim           "$HOME/.config/nvim"
-link zsh/.zshrc     "$HOME/.zshrc"
-link git/.gitconfig "$HOME/.gitconfig"
+link ghostty           "$HOME/.config/ghostty"
+link tmux              "$HOME/.config/tmux"
+link bat               "$HOME/.config/bat"
+link nvim              "$HOME/.config/nvim"
+link zsh/.zshrc        "$HOME/.zshrc"
+link git/.gitconfig    "$HOME/.gitconfig"
+link herdr/config.toml "$HOME/.config/herdr/config.toml"
 
 if [[ "${1:-}" == "--brew" ]]; then
     echo "installing brew packages..."
-    brew install eza bat fd ripgrep fzf zoxide git-delta lazygit btop tmux neovim \
+    brew install eza bat fd ripgrep fzf zoxide git-delta lazygit btop tmux neovim herdr \
         zsh-autosuggestions zsh-fast-syntax-highlighting
     brew install --cask font-fira-code-nerd-font
 fi

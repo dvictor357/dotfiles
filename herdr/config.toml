@@ -1,0 +1,122 @@
+# herdr — void palette, bottom status bar, tmux/nvim-style keys
+# prefix = ctrl+space (same as tmux). Reload: prefix R  or  herdr server reload-config
+
+onboarding = false
+
+# ── theme ─────────────────────────────────────────────────
+[theme]
+# "terminal" inherits ghostty's void palette; tokens below pin the UI chrome
+name = "terminal"
+
+[theme.custom]
+accent        = "#5fb56a"
+panel_bg      = "#0a0a0a"
+sidebar_bg    = "#0a0a0a"
+active_row_bg = "#161616"
+selection_bg  = "#262626"
+surface0      = "#161616"
+surface1      = "#262626"
+surface_dim   = "#0f0f0f"
+overlay0      = "#4a4a4a"
+overlay1      = "#6a6a6a"
+text          = "#c9c9c9"
+subtext0      = "#8a8a8a"
+green         = "#5fb56a"
+yellow        = "#c9a85c"
+red           = "#cf5c5c"
+blue          = "#6b8fb5"
+teal          = "#5fb5a8"
+mauve         = "#a98cc4"
+peach         = "#dbbf75"
+
+# ── ui ────────────────────────────────────────────────────
+[ui]
+accent = "#5fb56a"
+agent_panel_sort = "spaces"
+
+# bottom status bar: tabs on the left, zoom · host · clock on the right
+tab_bar_position = "bottom"
+tab_bar_right_separator = "  │  "
+tab_bar_right = [
+  { type = "zoom" },
+  { type = "hostname" },
+  { type = "datetime", format = "%a %d %b  %H:%M" },
+]
+
+pane_borders = "auto"
+pane_outer_borders = false
+pane_gaps = false
+pane_scrollbars = false
+prompt_new_tab_name = false
+window_title = "herdr · {workspace}"
+
+[ui.sidebar.agents]
+row_gap = 0
+
+[ui.sidebar.spaces]
+row_gap = 0
+
+# ── keys ──────────────────────────────────────────────────
+[keys]
+prefix = "ctrl+space"
+
+# session / workspace (≈ tmux sessions)
+detach            = "prefix+d"
+help              = "prefix+?"
+settings          = "prefix+comma"
+reload_config     = "prefix+shift+r"
+workspace_picker  = "prefix+w"
+goto              = "prefix+g"
+new_workspace     = "prefix+shift+n"
+rename_workspace  = "prefix+shift+w"
+close_workspace   = "prefix+shift+x"
+switch_workspace  = "prefix+shift+1..9"
+toggle_sidebar    = "prefix+b"
+
+# tabs (≈ tmux windows)
+new_tab           = "prefix+c"
+rename_tab        = "prefix+shift+t"
+previous_tab      = "prefix+p"
+next_tab          = "prefix+n"
+switch_tab        = "prefix+1..9"
+close_tab         = "prefix+shift+q"
+
+# panes (nvim <C-w> muscle memory)
+split_vertical    = "prefix+v"      # like :vsplit
+split_horizontal  = "prefix+s"      # like :split
+focus_pane_left   = "prefix+h"
+focus_pane_down   = "prefix+j"
+focus_pane_up     = "prefix+k"
+focus_pane_right  = "prefix+l"
+swap_pane_left    = "prefix+shift+h"
+swap_pane_down    = "prefix+shift+j"
+swap_pane_up      = "prefix+shift+k"
+swap_pane_right   = "prefix+shift+l"
+cycle_pane_next   = "prefix+o"
+last_pane         = "prefix+tab"
+close_pane        = "prefix+x"
+zoom              = "prefix+z"
+resize_mode       = "prefix+r"      # then h/j/k/l, esc to exit
+resize_pane_left  = "prefix+left"   # one-shot resize without entering mode
+resize_pane_down  = "prefix+down"
+resize_pane_up    = "prefix+up"
+resize_pane_right = "prefix+right"
+rename_pane       = "prefix+shift+p"
+new_worktree      = ""
+edit_scrollback   = "prefix+e"
+
+# popups (shift+letter; alt chords are unreliable through ghostty)
+# new_worktree default is prefix+shift+g — cleared so lazygit can have it
+[[keys.command]]
+key = "prefix+shift+g"
+type = "popup"
+command = "lazygit"
+width = "92%"
+height = "92%"
+
+[[keys.command]]
+key = "prefix+shift+b"
+type = "popup"
+command = "btop"
+width = "92%"
+height = "92%"
