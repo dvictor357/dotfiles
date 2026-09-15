@@ -28,3 +28,9 @@ palette = 12=#82a5cc
 palette = 13=#bca4d6
 palette = 14=#7ccbbf
 palette = 15=#ededed
+
+# search (ghostty 1.3): amber = candidates, green = current match
+search-background = #c9a85c
+search-foreground = #0a0a0a
+search-selected-background = #5fb56a
+search-selected-foreground = #0a0a0a

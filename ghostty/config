@@ -40,7 +40,7 @@ mouse-hide-while-typing = true
 
 # ── behavior ─────────────────────────────────────────────
 shell-integration = zsh
-shell-integration-features = cursor,no-sudo,title,path
+shell-integration-features = cursor,no-sudo,title,path,ssh-env,ssh-terminfo
 scrollback-limit = 20000000
 copy-on-select = clipboard
 clipboard-paste-protection = true
@@ -53,6 +53,14 @@ auto-update = check
 # ── splits ───────────────────────────────────────────────
 unfocused-split-opacity = 0.55
 split-divider-color = #262626
+split-preserve-zoom = navigation
+
+# ── notifications (herdr agent done, long commands) ──────
+# bell: dock bounce + 🔔 in title + border on the pane that rang
+bell-features = system,attention,title,border
+# macOS notification when a command >10s finishes in an unfocused pane
+notify-on-command-finish = unfocused
+notify-on-command-finish-after = 10s
 
 # ── quick terminal (dropdown) ────────────────────────────
 quick-terminal-position = top
@@ -82,6 +90,9 @@ keybind = cmd+shift+bracket_right=next_tab
 keybind = cmd+shift+r=reload_config
 keybind = cmd+shift+comma=open_config
 keybind = cmd+shift+f=toggle_fullscreen
+keybind = cmd+shift+i=prompt_tab_title
+# dump scrollback to tmp file, paste path (nvim <path> / feed to agent)
+keybind = cmd+shift+s=write_scrollback_file:paste
 keybind = cmd+plus=increase_font_size:1
 keybind = cmd+minus=decrease_font_size:1
 keybind = cmd+zero=reset_font_size
