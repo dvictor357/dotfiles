@@ -12,7 +12,7 @@ Terminal-first setup for macOS. Palette: **void** — near-black, grey, one gree
 | lazygit | `lazygit/config.yml` — void theme, delta pager, nerd icons |
 | btop    | `btop/themes/void.theme`, `btop/btop.conf` (seeded once, btop owns it after) |
 | bat     | `bat/config` |
-| git     | `git/.gitconfig` — delta pager |
+| git     | `git/.gitconfig` — delta pager; `git/.gitignore_global` |
 | brew    | `Brewfile` — curated: terminal core, cli tools, fonts, apps |
 
 ## Install

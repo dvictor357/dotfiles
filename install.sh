@@ -40,6 +40,7 @@ link bat               "$HOME/.config/bat"
 link nvim              "$HOME/.config/nvim"
 link zsh/.zshrc        "$HOME/.zshrc"
 link git/.gitconfig    "$HOME/.gitconfig"
+link git/.gitignore_global "$HOME/.gitignore_global"
 link herdr/config.toml "$HOME/.config/herdr/config.toml"
 link herdr/cheatsheet.txt "$HOME/.config/herdr/cheatsheet.txt"
 link lazygit/config.yml   "$HOME/Library/Application Support/lazygit/config.yml"  # macOS lazygit ignores ~/.config

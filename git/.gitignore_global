@@ -1,0 +1,25 @@
+# global gitignore — referenced from git/.gitconfig (core.excludesfile)
+# keep this to OS / editor / tool noise; project-specific rules belong in the repo
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# secrets / local overrides
+.zsh_secrets
+*.local.json
+.env.local
+**/.claude/settings.local.json
+
+# misc
+*.log
+.direnv/
