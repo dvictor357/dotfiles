@@ -8,7 +8,7 @@ Terminal-first setup for macOS. Palette: **void** — near-black, grey, one gree
 | zsh     | `zsh/.zshrc` — custom one-line prompt, fzf, eza, bat, zoxide |
 | tmux    | `tmux/tmux.conf` — prefix `ctrl+space`, top status bar |
 | herdr   | `herdr/config.toml` + `herdr/cheatsheet.txt` — void theme, bottom status bar, prefix `ctrl+space`, nvim-style pane keys |
-| nvim    | `nvim/` — LazyVim, tokyonight recolored to void |
+| nvim    | `nvim/` — LazyVim, tokyonight recolored to void; no bufferline/noice, flat lualine, bare dashboard |
 | lazygit | `lazygit/config.yml` — void theme, delta pager, nerd icons |
 | btop    | `btop/themes/void.theme`, `btop/btop.conf` (seeded once, btop owns it after) |
 | bat     | `bat/config` |
