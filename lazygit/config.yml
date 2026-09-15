@@ -1,0 +1,48 @@
+# lazygit — void palette, delta pager, nerd font icons
+# docs: https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
+
+gui:
+  nerdFontsVersion: "3"
+  border: single
+  showFileTree: true
+  showRandomTip: false
+  showCommandLog: false
+  showBottomLine: true
+  scrollHeight: 4
+  sidePanelWidth: 0.3
+  theme:
+    activeBorderColor: ["#5fb56a", bold]
+    inactiveBorderColor: ["#4a4a4a"]
+    searchingActiveBorderColor: ["#c9a85c", bold]
+    optionsTextColor: ["#4a4a4a"]
+    selectedLineBgColor: ["#161616"]
+    inactiveViewSelectedLineBgColor: ["#0f0f0f"]
+    cherryPickedCommitBgColor: ["#262626"]
+    cherryPickedCommitFgColor: ["#5fb56a"]
+    markedBaseCommitBgColor: ["#262626"]
+    markedBaseCommitFgColor: ["#c9a85c"]
+    unstagedChangesColor: ["#cf5c5c"]
+    defaultFgColor: ["#c9c9c9"]
+  authorColors:
+    "*": "#8a8a8a"
+  branchColorPatterns:
+    "^main$|^master$": "#5fb56a"
+    "^(feat|feature)/": "#6b8fb5"
+    "^(fix|hotfix)/": "#cf5c5c"
+
+git:
+  paging:
+    colorArg: always
+    pager: delta --paging=never   # delta styling comes from ~/.gitconfig
+  parseEmoji: true
+  log:
+    showGraph: always
+    showWholeGraph: false
+
+os:
+  editPreset: nvim
+
+update:
+  method: never
+
+disableStartupPopups: true

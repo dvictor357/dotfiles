@@ -30,6 +30,7 @@ link zsh/.zshrc        "$HOME/.zshrc"
 link git/.gitconfig    "$HOME/.gitconfig"
 link herdr/config.toml "$HOME/.config/herdr/config.toml"
 link herdr/cheatsheet.txt "$HOME/.config/herdr/cheatsheet.txt"
+link lazygit/config.yml   "$HOME/Library/Application Support/lazygit/config.yml"  # macOS lazygit ignores ~/.config
 
 if [[ "${1:-}" == "--brew" ]]; then
     echo "installing brew packages from Brewfile..."
