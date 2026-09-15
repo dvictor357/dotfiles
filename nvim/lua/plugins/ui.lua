@@ -62,7 +62,7 @@ return {
             { "filename", path = 1, symbols = { modified = " ●", readonly = " ", unnamed = "" }, color = { fg = void.fg } },
           },
           lualine_c = {
-            { "branch", icon = "", color = { fg = void.dim } },
+            { "branch", color = { fg = void.dim } },
             {
               "diagnostics",
               symbols = { error = "E", warn = "W", info = "I", hint = "H" },
@@ -104,12 +104,12 @@ return {
         preset = {
           header = "void",
           keys = {
-            { icon = "", key = "f", desc = "files", action = ":lua Snacks.dashboard.pick('files')" },
-            { icon = "", key = "r", desc = "recent", action = ":lua Snacks.dashboard.pick('oldfiles')" },
-            { icon = "", key = "g", desc = "grep", action = ":lua Snacks.dashboard.pick('live_grep')" },
-            { icon = "", key = "s", desc = "session", section = "session" },
-            { icon = "", key = "l", desc = "lazy", action = ":Lazy" },
-            { icon = "", key = "q", desc = "quit", action = ":qa" },
+            { key = "f", desc = "files", action = ":lua Snacks.dashboard.pick('files')" },
+            { key = "r", desc = "recent", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+            { key = "g", desc = "grep", action = ":lua Snacks.dashboard.pick('live_grep')" },
+            { key = "s", desc = "session", section = "session" },
+            { key = "l", desc = "lazy", action = ":Lazy" },
+            { key = "q", desc = "quit", action = ":qa" },
           },
         },
         sections = {

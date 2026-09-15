@@ -26,8 +26,8 @@ opt.fillchars = {
   vert = "│",
   horiz = "─",
   fold = " ",
-  foldopen = "",
-  foldclose = "",
+  foldopen = "-",
+  foldclose = "+",
   foldsep = " ",
   diff = "╱",
 }
